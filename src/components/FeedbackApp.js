@@ -24,7 +24,7 @@ export class FeedbackApp extends Component {
 
   countTotalFeedback = () => {
     const stateValues = Object.values(this.state);
-    console.log(stateValues);
+    // console.log(stateValues);
     const totalFeedbacks = stateValues.reduce((acc, value) => acc + value, 0);
 
     return totalFeedbacks;
@@ -63,7 +63,9 @@ export class FeedbackApp extends Component {
             />
           </Section>
         ) : (
-          <Notification message="There is no feedback"></Notification>
+          <Section title="Statistics">
+            <Notification message="There is no feedback"></Notification>
+          </Section>
         )}
       </Container>
     );
